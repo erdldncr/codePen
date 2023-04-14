@@ -28,12 +28,13 @@ payload:{
   }
 }
 
-export const insertcellBefore=(id:string, cellTypes:CellTypes):InsertCellBeforeAction=>{
+export const insertcellBefore=(id:string|null, cellTypes:CellTypes):InsertCellBeforeAction=>{
 
   return {
     type:ActionType.INSERT_CELL_BEFORE,
     payload:{
-      id,type:cellTypes
+      id
+      ,type:cellTypes
     }
   }
 }
