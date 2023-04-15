@@ -14,6 +14,11 @@ const renderedCells= cells.map((cell)=> (
     <CellListItem cell={cell}/>
   </Fragment>
 ) )
-  return <div>{renderedCells} <AddCell nextCellId={null}/> </div>
+  return <div>{renderedCells} 
+  <div className={cells.length===0?'force-visible':''}>
+<AddCell nextCellId={null}/> 
+
+  </div>
+  </div>
 }
 export default CellList;

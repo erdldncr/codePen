@@ -7,6 +7,9 @@
 .add-cell:hover{
   opacity: 1;
 }
+.foce-visible{
+  opacity:1 ;
+}
 
 .add-cell .divider{
   position: absolute;
