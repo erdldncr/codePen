@@ -10,15 +10,16 @@ const CellList: React.FC=()=>{
 const renderedCells= cells.map((cell)=> (
 
   <Fragment key={cell.id} >
-    <AddCell nextCellId={cell.id}/>
-    <CellListItem cell={cell}/>
+       <CellListItem cell={cell}/>
+    <AddCell previousCellId={cell.id}/>
   </Fragment>
 ) )
-  return <div>{renderedCells} 
+  return <div>
+   
   <div className={cells.length===0?'force-visible':''}>
-<AddCell nextCellId={null}/> 
-
+<AddCell previousCellId={null}/> 
   </div>
+   {renderedCells} 
   </div>
 }
 export default CellList;
