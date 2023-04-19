@@ -21,6 +21,8 @@ try {
       'process.env.NODE_ENV': '"production"',
       global: 'window',
     },
+    jsxFragment:'_React.Fragment',
+    jsxFactory:'_React.createElement'
   });
 
   return{code: result.outputFiles[0].text,err:''}

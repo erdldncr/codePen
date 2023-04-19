@@ -1,3 +1,4 @@
+import './cell-list.css'
 import { Fragment } from "react";
 import { usedTypedSelector } from "../hooks/use-typed-selector";
 import AddCell from "./add-cell";
@@ -14,7 +15,7 @@ const renderedCells= cells.map((cell)=> (
     <AddCell previousCellId={cell.id}/>
   </Fragment>
 ) )
-  return <div>
+  return <div className='cell-list'>
    
   <div className={cells.length===0?'force-visible':''}>
 <AddCell previousCellId={null}/> 
